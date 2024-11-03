@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset=" UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mensagem de Amor</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            function verificarSenha() {
+                var senha = document.getElementById("senha").value;
+                if (senha === "0102") { // Substitua "sua_senha" pela senha desejada
+                    document.getElementById("conteudo").style.display = "block";
+                    document.getElementById("formulario").style.display = "none";
+                } else {
+                    alert("Senha incorreta. Tente novamente.");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="formulario">
+            <h2>Digite a senha para acessar:</h2>
+            <input type="password" id="senha" placeholder="Senha">
+            <button onclick="verificarSenha()">Acessar</button>
+            <p>Dica: quando tudo começou :)</p> <!-- Dica de senha -->
+        </div>
+        <div id="conteudo" style="display:none;">
+            <h1>Eu te amo!</h1>
+        </div>
+    </body>
+</html>
